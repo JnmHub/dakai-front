@@ -1,0 +1,16 @@
+
+/* 简单的水印样式 */
+.watermark {
+  position: absolute;
+  bottom: 150px;
+  left: 20px;
+  color: white;
+  text-shadow: 1px 1px 2px black; /* 增加文字阴影防止背景太白看不清 */
+}
+.btn-area {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
