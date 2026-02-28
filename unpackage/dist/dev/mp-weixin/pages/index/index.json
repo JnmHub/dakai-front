@@ -1,4 +1,12 @@
 {
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {}
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u-search": "../../uni_modules/uview-plus/components/u-search/u-search",
+    "u-icon": "../../uni_modules/uview-plus/components/u-icon/u-icon",
+    "u-tag": "../../uni_modules/uview-plus/components/u-tag/u-tag",
+    "u-list-item": "../../uni_modules/uview-plus/components/u-list-item/u-list-item",
+    "u-list": "../../uni_modules/uview-plus/components/u-list/u-list",
+    "u-empty": "../../uni_modules/uview-plus/components/u-empty/u-empty",
+    "u-safe-bottom": "../../uni_modules/uview-plus/components/u-safe-bottom/u-safe-bottom"
+  }
 }

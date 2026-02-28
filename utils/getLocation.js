@@ -1,3 +1,4 @@
+// @/utils/getLocation.js
 /**
  * 获取定位（Promise版）
  * 自动处理：授权检测 -> 引导去设置页 -> 重新获取

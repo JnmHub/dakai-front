@@ -3,15 +3,66 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationStyle": "custom"
+				}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom"
+				}
+		},
+		{
+			"path": "pages/checkin/checkin",
+			"style": {
+				"navigationBarTitleText": ""
 			}
-		}
+		},
+		{
+					"path": "pages/mine/mine",
+					"style": {
+						"navigationBarTitleText": "个人中心",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "pages/mine/password",
+					"style": {
+						"navigationBarTitleText": "修改密码"
+					}
+				},
+				{
+					"path": "pages/mine/records",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+			"color": "#909399",
+			"selectedColor": "#2979ff",
+			"borderStyle": "white",
+			"backgroundColor": "#ffffff",
+			"list": [
+				{
+					"pagePath": "pages/index/index",
+					"text": "打卡",
+					"iconPath": "static/icons/home.png",
+					"selectedIconPath": "static/icons/home-active.png"
+				},
+				{
+					"pagePath": "pages/mine/mine",
+					"text": "我的",
+					"iconPath": "static/icons/user.png",
+					"selectedIconPath": "static/icons/user-active.png"
+				}
+			]
+		}
 }

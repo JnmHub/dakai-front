@@ -41,7 +41,11 @@
                 ]
             },
             /* ios打包配置 */
-            "ios" : {},
+            "ios" : {
+                "privacyDescription" : {
+                    "NSCameraUsageDescription" : ""
+                }
+            },
             /* SDK配置 */
             "sdkConfigs" : {}
         }
@@ -50,11 +54,11 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx4c4a00f1ec56bc31",
+        "appid" : "wxab1ad8ca5e63b61b",
         "setting" : {
             "urlCheck" : false
         },
-		"requiredPrivateInfos":["getLocation"],
+        "requiredPrivateInfos" : [ "getLocation" ],
         "usingComponents" : true,
         "permission" : {
             "scope.userLocation" : {
