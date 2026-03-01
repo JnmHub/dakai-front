@@ -210,20 +210,13 @@ const doUpload = async () => {
     console.log(pointId.value, myCurrentLoc.value, address.value)
 
     try {
-        // await uni.uploadFile({
-        //     url: 'http://你的后端IP:8000/api/v1/checkin/upload',
-        //     filePath: previewImage.value,
-        //     name: 'file',
-        //     header: { token: userStore.token },
-        //     formData: { point_id: pointId.value, employee_id: userStore.userInfo.id, lat: myCurrentLoc.value.lat, lon: myCurrentLoc.value.lon }
-        // })
-        console.log('开始')
-
-        await uploadCheckOut(previewImage.value, pointId.value, myCurrentLoc.value, address.value)
-        console.log('结束')
-
-        uni.showToast({ title: '打卡成功', icon: 'success' })
-        setTimeout(() => uni.navigateBack(), 1500)
+        const res = await uploadCheckOut(previewImage.value, pointId.value, myCurrentLoc.value, address.value)
+		uni.showModal({
+			content:JSON.parse(res.data).msg,
+			success: () => {
+					setTimeout(() => uni.navigateBack(), 0)
+			},
+		})
     } catch (e) {
         uni.showToast({ title: '上传失败', icon: 'none' })
     } finally {

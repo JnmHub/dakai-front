@@ -10,6 +10,7 @@
 
         <view class="menu-list">
             <u-cell-group :border="false">
+                <u-cell icon="lock" title="解绑微信" @click="toUnbindWechat"></u-cell>
                 <u-cell icon="calendar" title="打卡历史记录" @click="toCheckinRecords"></u-cell>
                 <u-cell icon="lock-open" title="修改登录密码" @click="toChangePassword"></u-cell>
                 <u-cell icon="info-circle" title="关于系统" value="v1.0.0" isLink></u-cell>
@@ -24,7 +25,7 @@
 
 <script setup>
 import { useUserStore } from '@/store/user'
-
+import {unbind_wechat} from '@/api/auth.js'
 const userStore = useUserStore()
 
 const handleLogout = () => {
@@ -52,6 +53,15 @@ const toCheckinRecords = () => {
         url: '/pages/mine/records'
     })
 }
+const toUnbindWechat = async() => {
+    await unbind_wechat()
+	uni.showToast({
+		icon:'success',
+		title:"解绑成功"
+		
+	})
+}
+
 </script>
 
 <style lang="scss" scoped>
